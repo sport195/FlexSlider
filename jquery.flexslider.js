@@ -226,7 +226,10 @@
 							// This will element the issue of UNDEFINED that we were getting on the SPORTS195 WLS Homepage.
 							slider.controlNavScaffold.append( '<li>' + item + '</li>' );
 							if ( type === 'control-thumbs' ) {
-								slider.controlNavScaffold.find( 'li' ).css( "background-image", "url('" + slide.attr( 'data-thumb' ) + "')" );
+								var li = slider.controlNavScaffold.find( 'li' )[ i ],
+									dj = "<div class=\"bg-image-ratio image\" style=\"background-image:url(\' " + slide.attr( 'data-thumb' ) + " \');\"></div>";
+
+								$( li ).append( dj );
 							}
 							j++;
 						}
